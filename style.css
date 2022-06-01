@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+#box {
+    background-image: url(background.png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+#download {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    gap: 50px;
+}
+#click {
+    position: relative;
+    background-color: #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+#click:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+#click::before {
+    content:'';
+    position: absolute;
+    inset: 2px;
+    background:#27282c;
+}
+
+#click span {
+    position: relative;
+    z-index: 1;
+}
+
+#click i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#click i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: lightblue;
+    box-shadow: 0 0 35px var(--clr);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+#click:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+#click i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: lightblue;
+    box-shadow: 0 0 35px var(--clr);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+#click:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+
+#box #title {
+    font-size: 30px;
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+    padding-top: 10vh;
+    font-family: monospace;
+    -webkit-animation: right 1s linear;
+}
+
+@-webkit-keyframes right {
+    0% {margin-right:100%}
+    50%  {margin-right:0;}
+    0% {opacity:0;}
+    50% {opacity: 0.5;}
+    100% {opacity:1;}
+}
