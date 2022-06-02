@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
     <head>
-        <title>About</title>
+        <title>下載</title>
         <link rel="stylesheet" type="text/css" href="menu.css">
         <link rel="stylesheet" type="text/css" href="download.css">
         <link rel="icon" href="icon.gif">
@@ -9,20 +9,23 @@
     <body>
         <div id="box">
             <div id="menu">
-                <span id="label"><i id="solid link"></i>Menu</span>
-                <ul id="item">
-                    <li id="list home"><a href="index.html" data-text="Home">Home</a></li>
-                    <li id="list about"><a href="about.html" data-text="About">About</a></li>
-                    <li id="list download"><a href="download.html" data-text="Download">Download</a></li>
-                    <li id="list contact"><a href="contact.html" data-text="Download">Contact</a></li>
-                </ul>
+                <button class="checkbox" role="switch" aria-checked="false">
+                    <a id="label">選單</a>
+                    <ul id="item">
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="download.html">下載</a></li>
+                        <li><a href="map.html">地圖介紹</a></li>
+                    </ul>
+                </button>
             </div>
             <div id="button">
-                <button class="cybr-btn">
+                <button class="cybr-btn" onclick="window.open('worldedit.jar')">
                     Download<span aria-hidden>_</span>
                     <span aria-hidden class="cybr-btn__glitch">Download</span>
                     <span aria-hidden class="cybr-btn__tag">1.0</span>
                 </button>
+                <script src="script.js"></script>
             </div>
         </div>
     </body>
